@@ -37,3 +37,41 @@
  .bottomNav{display:flex;position:fixed;left:8px;right:8px;bottom:8px;height:58px;z-index:30;background:rgba(13,18,25,.96);border:1px solid #202b38;border-radius:16px;backdrop-filter:blur(18px);box-shadow:0 12px 35px #0008}
  .bottomNav button{flex:1;border:0;background:transparent;color:#647286;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:8px}.bottomNav b{font-size:17px;line-height:16px}.bottomNav button.active{color:#58d99a}
 }
+
+/* Clean odds board */
+.marketHeader{display:flex;justify-content:space-between;align-items:center;padding:9px 13px;border-top:1px solid #18212c;border-bottom:1px solid #18212c;background:#0b1017}
+.marketHeader span{font-size:10px;text-transform:uppercase;letter-spacing:1px;font-weight:900;color:#dce5ef}
+.marketHeader small{font-size:8px;color:#687589}
+.cleanOdds{display:grid;gap:7px;padding:10px 12px}
+.cleanOdds.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cleanOdds.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.oddBox{position:relative;min-width:0;min-height:72px;border:1px solid #202b38;background:#0c1219;border-radius:10px;padding:10px;display:flex;flex-direction:column;justify-content:center;overflow:visible}
+.oddBox.favoriteOdd{border-color:#58d99a;background:#101c19}
+.oddTeam{font-size:11px;color:#d5deea;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:4px}
+.oddBox small{font-size:8px;color:#758297;margin-top:2px}
+.oddBox b{font-size:18px;color:#fff;line-height:1.15;margin-top:5px}
+.oddBox em{font-style:normal;font-size:7px;color:#647286;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-top:4px}
+.favTag{position:absolute;right:7px;top:-7px;background:#58d99a;color:#06110b;font-size:7px;font-weight:900;padding:3px 5px;border-radius:5px}
+.teamDot{display:inline-block;width:6px;height:6px;border-radius:50%;background:#657386;vertical-align:middle;margin-right:2px}
+@media(max-width:900px){
+ .sidebar{display:none}
+ .content{margin-left:0;width:100%;max-width:none;padding:22px 18px 90px}
+ .grid{grid-template-columns:repeat(auto-fill,minmax(330px,1fr))}
+}
+@media(max-width:560px){
+ .content{padding:0 10px 78px}
+ .mobileBrand{display:flex}
+ .topbar{padding:10px 2px 5px}
+ .toolbar{margin:10px 0 8px}
+ .grid{display:block}
+ .card{margin-bottom:9px}
+ .cardHead{padding:12px}
+ .marketHeader{padding:8px 11px}
+ .marketHeader span{font-size:9px}
+ .marketHeader small{font-size:7px}
+ .cleanOdds{padding:9px 10px;gap:6px}
+ .oddBox{min-height:70px;padding:9px 8px}
+ .oddTeam{font-size:9px}
+ .oddBox b{font-size:16px}
+ .oddBox em{font-size:6px}
+}
